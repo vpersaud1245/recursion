@@ -1,16 +1,18 @@
 /**
  * Generates an array of Fibonacci numbers up to a specified length.
  *
- * @param {Number} num - The length of the Fibonacci sequence to generate.
+ * @param {number} num - The length of the Fibonacci sequence to generate.
  * @returns {Array} - An array containing the Fibonacci sequence.
  */
 function fibs(num) {
   const fibArray = [0, 1];
+
   for (let i = 2; i < num; i += 1) {
-    let prevNum = fibArray[i - 1];
-    let secondPrevNum = fibArray[i - 2];
+    const prevNum = fibArray[i - 1];
+    const secondPrevNum = fibArray[i - 2];
     fibArray.push(prevNum + secondPrevNum);
   }
+
   return fibArray;
 }
 
